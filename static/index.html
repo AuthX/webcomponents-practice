@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Webcomponents Practice</title>
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <accordion-component class="accordion card">
+                <div class="card">
+                    <div class="card-header" data-header>
+                        <h2>
+                            <button class="btn btn-link" type="button">
+                                How to use
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="card-body" data-body hidden>
+                        This is the accordion example. You can take a look at the code at /src/components/accordion/index.js<br />
+                        You can get familiar with how the build works as well.
+                    </div>
+                    <div class="card-header" data-header>
+                        <h2>
+                            <button class="btn btn-link" type="button">
+                                How the build works
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="card-body" data-body hidden>
+                        The build picks up everything linked from /src/index.js and builds it into a main.js. CSS files that are imported get included and built into a main.css file.<br />
+                        That's pretty much all there is to it. This example was built with Bootstrap only for quick styling because the exact look doesn't matter.
+                    </div>
+                    <div class="card-header" data-header>
+                        <h2>
+                            <button class="btn btn-link" type="button">
+                                Next steps
+                            </button>
+                        </h2>
+                    </div>
+                    <div class="card-body" data-body hidden>
+                        You could look at the Accordion code and probably figure out a more efficient or different way of doing things.<br />
+                        During a meeting, we can tack more things onto this example and build more things for fun.
+                    </div>
+                </div>
+            </accordion-component>
+        </div>
+
+        <script type="text/javascript" src="/main.js"></script>
+    </body>
+</html>

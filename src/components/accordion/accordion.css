@@ -1,0 +1,9 @@
+.card-header {
+    cursor: pointer;
+}
+.card-header button:hover,
+.card-header button:active,
+.card-header button:visited,
+.card-header button:focus {
+    text-decoration: none;
+}
