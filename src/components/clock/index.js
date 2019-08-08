@@ -9,14 +9,14 @@ import './clock.css'
 class ClockComponent extends HTMLElement {
     // gets called when the element is added to the page
     connectedCallback() {
-		// setInterval(() => {
+		setInterval(() => {
 			this.innerHTML =  
 				`<div class="clock">
 					<div class="clock__inner">
 						${this.getTime()}
 					</div>
 				</div>`;
-		// }, 1000);
+		}, 1000);
 	}
 
 	getTime() {
