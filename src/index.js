@@ -4,3 +4,4 @@ import './main.css'
 
 // Entrypoint for JS
 import './components/accordion'
+import './components/contact-list'
