@@ -1,0 +1,24 @@
+.clock {
+	font-size: 300px;
+    letter-spacing: -55px;
+	color: rgba(255, 0, 0, 0.69);
+	display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.clock__inner {
+    position: relative;
+    bottom: -82px;
+	right: 43px;
+	min-width: 700px;
+}
+
+.clock__time {
+	display: inline;
+}
+
+.clock__separator {
+	margin: 0 16px;
+}
