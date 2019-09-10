@@ -2,19 +2,14 @@ import './accordion.css'
 
 class AccordionComponent extends HTMLElement {
     connectedCallback() {
-        Array.from(this.querySelectorAll('[data-header]')).forEach(header => {
-            header.addEventListener('click', (e) => {
-                e.preventDefault()
-
-                this.collapseAll()
-                header.nextElementSibling.hidden = false
-            })
-        })
+        const accordion = Array.from(this.querySelectorAll('[data-panel]'))
+        accordion.forEach(panel => 
+            panel.addEventListener('click', () => this.collapseOthers(accordion, panel)))
     }
 
-    collapseAll() {
-        Array.from(this.querySelectorAll('[data-body]')).forEach(body => {
-            body.hidden = true
+    collapseOthers(accordion, toggled) {
+        accordion.forEach(panel => {
+            if (!toggled.isSameNode(panel)) panel.parentNode.open = false
         })
     }
 }
