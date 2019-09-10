@@ -1,5 +1,9 @@
 .card-header {
     cursor: pointer;
+    list-style: none;
+}
+.card-header::-webkit-details-marker {
+    display: none;
 }
 .card-header button:hover,
 .card-header button:active,
