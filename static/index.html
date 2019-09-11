@@ -5,13 +5,55 @@
     </head>
     <body>
         <div class="container">
+            <table-component>
+                <form class="form-group" id="table-filter">
+                    <label for="filter-input">Enter text here to filter the table by Last Name:</label>
+                    <input type="text" class="form-control" id="filter-input">
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </form>
+                <table class="table">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Age</th>
+                        <th>Date of Birth</th>
+                    </tr>
+                    <tr>
+                        <td>Mike</td>
+                        <td>Tyson</td>
+                        <td>53</td>
+                        <td>June 30, 1966</td>
+                    </tr>
+                    <tr>
+                        <td>Janet</td>
+                        <td>Jackson</td>
+                        <td>54</td>
+                        <td>June 30, 1965</td>
+                    </tr>
+                    <tr>
+                        <td>Richard</td>
+                        <td>Pryor</td>
+                        <td>55</td>
+                        <td>June 30, 1964</td>
+                    </tr>
+                    <tr>
+                        <td>Whoopi</td>
+                        <td>Goldberg</td>
+                        <td>56</td>
+                        <td>June 30, 1963</td>
+                    </tr>
+                </table>
+            </table-component>
+        </div>
+
+        <div class="container">
             <accordion-component class="accordion card">
                 <details class="card">
                     <summary class="card-header">
                         <h2 class="btn btn-link">Updated accordion</h2>
                     </summary>
                     <p class="card-body">
-                        This version of the accordion uses the details element for native browser "accordion" behavior. It retains some functionality when JavaScript is off, and discloses all details on unsupported browsers. 😄
+                        This version of the accordion uses the <code>&lt;details&gt;</code> element for native browser "accordion" behavior. It retains some functionality when JavaScript is off, allows the open panel to close again, and discloses all details on unsupported browsers. 😄
                     </p>
                 </details>
                 <details class="card">
