@@ -1,0 +1,13 @@
+.sort-col {
+    cursor: pointer;
+}
+.sort-col:hover {
+    background-color: lightgrey;
+}
+.asc::after {
+    content: " ▲";
+}
+
+.desc::after {
+    content: " ▼";
+}
