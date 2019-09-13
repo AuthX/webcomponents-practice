@@ -5,18 +5,32 @@
 
 
 import './clock.css'
-
+// import pauseOrPlay from './../../services/clock';
 class ClockComponent extends HTMLElement {
-    // gets called when the element is added to the page
-    connectedCallback() {
-		setInterval(() => {
-			this.innerHTML =  
-				`<div class="clock">
-					<div class="clock__inner">
-						${this.getTime()}
-					</div>
-				</div>`;
-		}, 1000);
+	// gets called when the element is added to the page
+	connectedCallback() {
+		this.refreshTime = 1000;
+		this.button = this.querySelector('button');
+		this.clockInner = this.querySelector('.clock__inner');
+		this.pauseText = 'pause the clock';
+		this.resumeText = 'resume counting';
+		this.set = setInterval(() => this.setInner(), this.refreshTime);
+
+		this.button.addEventListener('click', () => {
+			this.classList.toggle('pause');
+			if(this.classList.value === 'pause') {
+				clearInterval(this.set);
+				this.setInner();
+				this.button.innerText = this.pauseText;
+			} else {
+				this.set = setInterval(() => this.setInner(), this.refreshTime);
+				this.button.innerText = this.resumeText;
+			}
+		});
+	}
+
+	setInner() {
+		this.clockInner.innerHTML = this.getTime();
 	}
 
 	getTime() {

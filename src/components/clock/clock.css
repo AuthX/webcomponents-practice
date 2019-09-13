@@ -1,14 +1,29 @@
+:root {
+	--set-flex: {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-end;
+	}
+
+	--flex-justify-space-between: {
+		@apply --set-flex;
+		justify-content: space-between;
+	}
+
+	--flex-justify-end: {
+		@apply --set-flex;
+		justify-content: flex-end;
+	}
+}
+
 .clock {
+	@apply --flex-justify-space-between;
+}
+.clock__inner {
+	@apply --flex-justify-end;
 	font-size: 300px;
     letter-spacing: -55px;
 	color: rgba(255, 0, 0, 0.69);
-	display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    align-content: flex-end;
-}
-
-.clock__inner {
     position: relative;
     bottom: -82px;
 	right: 43px;
@@ -21,4 +36,14 @@
 
 .clock__separator {
 	margin: 0 16px;
+}
+
+.clock button {
+	font-size: 70px;
+	letter-spacing: -9px;
+	word-spacing: 17px;
+	color: rgba(255, 255, 255, 0.69);
+	background: transparent;
+    outline: none;
+    border: none;
 }

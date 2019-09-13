@@ -10,3 +10,6 @@ body {
 	align-items: flex-end;
 	max-width: 100%;
 }
+clock-component {
+	width: 100%;
+}
