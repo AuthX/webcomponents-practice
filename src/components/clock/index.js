@@ -15,7 +15,10 @@ class ClockComponent extends HTMLElement {
 		this.pauseText = 'pause the clock';
 		this.resumeText = 'resume counting';
 		this.set = setInterval(() => this.setInner(), this.refreshTime);
+		this.setEventListener();
+	}
 
+	setEventListener() {
 		this.button.addEventListener('click', () => {
 			this.classList.toggle('pause');
 			if(this.classList.value === 'pause') {
