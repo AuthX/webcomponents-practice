@@ -21,10 +21,10 @@ class ClockComponent extends HTMLElement {
 			if(this.classList.value === 'pause') {
 				clearInterval(this.set);
 				this.setInner();
-				this.button.innerText = this.pauseText;
+				this.button.innerText = this.resumeText;
 			} else {
 				this.set = setInterval(() => this.setInner(), this.refreshTime);
-				this.button.innerText = this.resumeText;
+				this.button.innerText = this.pauseText;
 			}
 		});
 	}
